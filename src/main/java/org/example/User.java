@@ -4,7 +4,7 @@ public class User {
     private String firstName;
     private String secondName;
     private int age;
-    public void User(String firstName, String secondName, int age){
+    public User(String firstName, String secondName, int age){
         setFirstName(firstName);
         setSecondName(secondName);
         setAge(age);

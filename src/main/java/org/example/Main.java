@@ -1,9 +1,11 @@
 package org.example;
+import com.sun.org.glassfish.external.statistics.AverageRangeStatistic;
 import org.example.Book;
 import org.example.Printable;
 import org.example.Magazine;
 
-import java.util.Arrays;
+import java.util.*;
+import java.util.stream.Collector;
 
 public class Main {
     public static void main(String[] args) {
@@ -57,6 +59,8 @@ public class Main {
         myFirstBook.printInterface(()->System.out.println("Book '"+ myFirstBook.getMyName() + "' was printed ..."));
         mySecondMagazine.printInterface(()->System.out.println("Magazine '"+ mySecondMagazine.getMyName() + "' was printed ..."));
 
+        System.out.println("\n");
+
         /*
         Створити клас User з полями: firstName, secondName, age. Виконати наступні операції:
         - Створити список з 10 обєктів типу User
@@ -67,5 +71,67 @@ public class Main {
         - Перевірити чи всі юзери старше 18 років
          */
 
+        //- Створити список з 10 обєктів типу User
+        ArrayList <User> userArrayList = new ArrayList<>();
+
+        User user = new User("Maxim","Vlasov",19);
+         userArrayList.add(user);
+        User user2 = new User("Vasiliy","Petrov",50);
+         userArrayList.add(user2);
+        User user3 = new User("Mister","Ain",45);
+         userArrayList.add(user3);
+        User user4 = new User("Fanto","Mas",35);
+         userArrayList.add(user4);
+        User user5 = new User("Billy","Bons",55);
+         userArrayList.add(user5);
+        User user6 = new User("Bet","Men",30);
+         userArrayList.add(user6);
+        User user7 = new User("Dunkan","McClaut",400);
+         userArrayList.add(user7);
+        User user8 = new User("Dunkan","Sorever",100);
+         userArrayList.add(user8);
+        User user9 = new User("Windows","MustDie",99);
+         userArrayList.add(user9);
+        User user10 = new User("Ice","Cream",19);
+         userArrayList.add(user10);
+        System.out.println("\n");
+
+        // - відсортувати за віком та записати в нову колекцію
+        ArrayList <User> userArrayListNew = new ArrayList<>();
+        Comparator <User> comparatorAgeOfUser = (u1, u2) -> {
+            return u1.getAge() - u2.getAge();
+        };
+        userArrayList.sort(comparatorAgeOfUser);
+        userArrayList.forEach(item -> userArrayListNew.add(item));
+        userArrayListNew.forEach(System.out::println);
+        System.out.println("\n");
+
+        // - Підрахувати ссередній вік юзерів
+        System.out.println("Average age is: " + userArrayList.stream().map(i -> i.getAge()).mapToDouble(i -> i).average().getAsDouble());
+        System.out.println("\n");
+
+        // - Сортувати по декількам властивостям: firstName і age
+        Comparator <User> comparatorNameAgeOfUser = (u1, u2) -> {
+            if (u1.getFirstName().compareTo(u2.getFirstName()) == 0){
+                return u1.getAge() - u2.getAge();
+            }
+            return u1.getFirstName().compareTo(u2.getFirstName());
+        };
+        userArrayList.sort(comparatorNameAgeOfUser);
+        userArrayList.forEach(System.out::println);
+        System.out.println("\n");
+
+        // - Перевірити чи є юзери у юких прізвище починаєтся з літери "S' або "А"
+        userArrayList.stream().map(i -> i)
+                .filter(i -> ( (i.getSecondName().charAt(0) == 'S') || (i.getSecondName().charAt(0) == 'A') ))
+                .forEach(System.out::println);
+        System.out.println("\n");
+
+        // Перевірити чи всі юзери старше 18 років
+        System.out.println("Are all users over 18 ? " + ((userArrayList.stream()
+                .map(i -> i.getAge())
+                .filter(i -> i<19)
+                .toArray().length) == 0));
+        System.out.println("\n");
     }
 }

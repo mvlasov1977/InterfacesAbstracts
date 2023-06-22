@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a5035a4-1287-46c2-9df2-8bd4c3effb2c" name="Changes" comment="Printable was implemented">
+    <list default="true" id="9a5035a4-1287-46c2-9df2-8bd4c3effb2c" name="Changes" comment="workspace changed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,13 +90,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685188639160</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="workspace changed">
+      <created>1685215766744</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685215766744</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit. Class Model, abstract class MobilePhone, interface Mobile were created" />
     <MESSAGE value="change workspace" />
     <MESSAGE value="Printable was implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Printable was implemented" />
+    <MESSAGE value="workspace changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace changed" />
   </component>
 </project>

@@ -56,5 +56,16 @@ public class Main {
 
         myFirstBook.printInterface(()->System.out.println("Book '"+ myFirstBook.getMyName() + "' was printed ..."));
         mySecondMagazine.printInterface(()->System.out.println("Magazine '"+ mySecondMagazine.getMyName() + "' was printed ..."));
+
+        /*
+        Створити клас User з полями: firstName, secondName, age. Виконати наступні операції:
+        - Створити список з 10 обєктів типу User
+        - відсортувати за віком та записати в нову колекцію
+        - Підрахувати ссередній вік юзерів
+        - Сортувати по декількам властивостям: firstName і age
+        - Перевірити чи є юзери у юких прізвище починаєтся з літери "S' або "А"
+        - Перевірити чи всі юзери старше 18 років
+         */
+
     }
 }

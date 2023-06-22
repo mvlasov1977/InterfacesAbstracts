@@ -2,6 +2,9 @@ package org.example;
 import org.example.Book;
 import org.example.Printable;
 import org.example.Magazine;
+
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -27,6 +30,7 @@ public class Main {
 
         for (Printable myItem:arrayOfEdition) {
             myItem.print();
+
         }
         System.out.println("\n");
 
@@ -38,5 +42,19 @@ public class Main {
         Magazine.printMagazines(arrayOfEdition);
         System.out.println("\n");
 
+        /*
+        1. Створити лямбда вираз для інтерфейсу Printable з дз 8
+        2. Перробити виклик метода print через посилання на метод
+         */
+
+        // Створюю лямбда вираз для інтерфейсу Printable
+        Printable p = () -> System.out.println("hello LAMBDA");
+        p.print(); //  hello LAMBDA
+        System.out.println("\n");
+
+        //Перероблюю виклик метода print через посилання на метод
+
+        myFirstBook.printInterface(()->System.out.println("Book '"+ myFirstBook.getMyName() + "' was printed ..."));
+        mySecondMagazine.printInterface(()->System.out.println("Magazine '"+ mySecondMagazine.getMyName() + "' was printed ..."));
     }
 }

@@ -33,4 +33,7 @@ public class Book implements Printable{
             }
         }
     }
+    public void printInterface(Printable p){
+        p.print();
+    }
 }

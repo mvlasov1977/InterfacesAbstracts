@@ -33,4 +33,7 @@ public class Magazine implements Printable{
             }
         }
     }
+    public static void printInterface(Printable p){
+        p.print();
+    }
 }

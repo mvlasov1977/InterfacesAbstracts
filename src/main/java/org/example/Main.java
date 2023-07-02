@@ -96,13 +96,10 @@ public class Main {
          userArrayList.add(user10);
         System.out.println("\n");
 
+        UsersDataManipulation UsersData = new UsersDataManipulation("My Users data");
         // - відсортувати за віком та записати в нову колекцію
         ArrayList <User> userArrayListNew = new ArrayList<>();
-        Comparator <User> comparatorAgeOfUser = (u1, u2) -> {
-            return u1.getAge() - u2.getAge();
-        };
-        userArrayList.sort(comparatorAgeOfUser);
-        userArrayList.forEach(item -> userArrayListNew.add(item));
+        UsersData.sortByAgePutIntoNewCollection(userArrayList, userArrayListNew);
         userArrayListNew.forEach(System.out::println);
         System.out.println("\n");
 

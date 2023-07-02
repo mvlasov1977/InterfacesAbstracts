@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a5035a4-1287-46c2-9df2-8bd4c3effb2c" name="Changes" comment="release homework 12">
+    <list default="true" id="9a5035a4-1287-46c2-9df2-8bd4c3effb2c" name="Changes" comment="release homework 12 v2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/UsersDataManipulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +135,17 @@
     </task>
     <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit. Class Model, abstract class MobilePhone, interface Mobile were created" />

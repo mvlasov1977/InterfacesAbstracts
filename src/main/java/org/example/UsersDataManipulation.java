@@ -15,4 +15,7 @@ public class UsersDataManipulation {
         };
         inputCollection.stream().sorted(comparatorAgeOfUser).forEach(outputCollection::add);
     }
+    public Double getUsersAverageAge(ArrayList <User> inputCollection){
+        return inputCollection.stream().map(i -> i.getAge()).mapToDouble(i -> i).average().getAsDouble();
+    }
 }

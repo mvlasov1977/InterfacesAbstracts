@@ -104,7 +104,7 @@ public class Main {
         System.out.println("\n");
 
         // - Підрахувати ссередній вік юзерів
-        System.out.println("Average age is: " + userArrayList.stream().map(i -> i.getAge()).mapToDouble(i -> i).average().getAsDouble());
+        System.out.println("Average age is: " + UsersData.getUsersAverageAge(userArrayList));
         System.out.println("\n");
 
         // - Сортувати по декількам властивостям: firstName і age

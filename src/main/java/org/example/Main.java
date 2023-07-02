@@ -1,11 +1,6 @@
 package org.example;
-import com.sun.org.glassfish.external.statistics.AverageRangeStatistic;
-import org.example.Book;
-import org.example.Printable;
-import org.example.Magazine;
 
 import java.util.*;
-import java.util.stream.Collector;
 
 public class Main {
     public static void main(String[] args) {

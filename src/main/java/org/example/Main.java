@@ -108,27 +108,20 @@ public class Main {
         System.out.println("\n");
 
         // - Сортувати по декількам властивостям: firstName і age
-        Comparator <User> comparatorNameAgeOfUser = (u1, u2) -> {
-            if (u1.getFirstName().compareTo(u2.getFirstName()) == 0){
-                return u1.getAge() - u2.getAge();
-            }
-            return u1.getFirstName().compareTo(u2.getFirstName());
-        };
-        userArrayList.sort(comparatorNameAgeOfUser);
+        UsersData.sortByNameThenAge(userArrayList);
         userArrayList.forEach(System.out::println);
         System.out.println("\n");
 
         // - Перевірити чи є юзери у юких прізвище починаєтся з літери "S' або "А"
-        userArrayList.stream().map(i -> i)
-                .filter(i -> ( (i.getSecondName().charAt(0) == 'S') || (i.getSecondName().charAt(0) == 'A') ))
-                .forEach(System.out::println);
+        if ( UsersData.isSecondNameContainSorA(userArrayList) ){
+            System.out.println("Some eser contains S and A in second name !");
+        }else {
+            System.out.println("Any user contains S and A in second name !");
+        }
         System.out.println("\n");
 
         // Перевірити чи всі юзери старше 18 років
-        System.out.println("Are all users over 18 ? " + ((userArrayList.stream()
-                .map(i -> i.getAge())
-                .filter(i -> i<19)
-                .toArray().length) == 0));
+        System.out.println("Are all users over 18 ? " + (UsersData.isAllUsersHaveOver18Years(userArrayList)));
         System.out.println("\n");
     }
 }
